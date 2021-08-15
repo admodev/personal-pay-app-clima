@@ -1,20 +1,24 @@
 import React from 'react';
-import type { Node } from 'react';
-import { SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-const Home: () => Node = ({ navigation }) => {
+// Components
+import ActualWeatherComponent from '../components/ActualWeatherComponent';
+
+const Home = ({ navigation }) => {
     return (
-        <SafeAreaView>
-            <View>
-                <Text>Home</Text>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Favourites')}
-                >
-                    <Text>Ir a favoritos</Text>
-                </TouchableOpacity>
-            </View>
+        <SafeAreaView style={styles.mainView}>
+            <ActualWeatherComponent />
+            <TouchableOpacity onPress={() => navigation.navigate('Favourites')}>
+                <Text>Ir a favoritos</Text>
+            </TouchableOpacity>
         </SafeAreaView>
     );
 };
+
+const styles = StyleSheet.create({
+    mainView: {
+        flex: 1
+    }
+});
 
 export default Home;
