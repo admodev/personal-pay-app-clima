@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
 const ActualWeatherComponent = () => {
     return (
@@ -9,6 +9,15 @@ const ActualWeatherComponent = () => {
                 <Text style={styles.grades}>12 °C</Text>
                 <Text style={styles.weatherType}>Soleado</Text>
             </View>
+            <Image
+                source={require('../assets/img/icons8-sol-48.png')}
+                style={{
+                    width: 82,
+                    height: 82,
+                    marginTop: 80,
+                    marginRight: 50
+                }}
+            />
         </View>
     );
 };
@@ -17,13 +26,16 @@ const styles = StyleSheet.create({
     container: {
         width: 322,
         height: 266,
+        display: 'flex',
+        flexDirection: 'row',
         borderBottomRightRadius: 8,
         backgroundColor: '#FF3366'
     },
     innerContainer: {
         flex: 1,
         alignItems: 'flex-start',
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        marginTop: 15
     },
     cityText: {
         fontSize: 24,
