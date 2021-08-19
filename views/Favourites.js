@@ -6,7 +6,7 @@ const Favourites: () => Node = ({ navigation }) => {
     return (
         <SafeAreaView>
             <View>
-                <Text>Favourites</Text>
+                <Text>Favoritos</Text>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
                     <Text>Ir a atras</Text>
                 </TouchableOpacity>
